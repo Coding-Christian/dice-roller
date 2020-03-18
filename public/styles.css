@@ -3,6 +3,14 @@
   flex-wrap: wrap;
 }
 
+.dice-controls {
+  margin-bottom: 10px;
+}
+
+.dice-controls > button {
+  margin: 0 5px;
+}
+
 .square-dice {
   display: flex;
   align-items: center;
