@@ -6,7 +6,7 @@ function App(props) {
   return (<>
     <h1>Total: {sumTotal}</h1>
     <hr/>
-    <DiceTray setSumTotal={setSumTotal}/>
+    <DiceTray setSumTotal={setSumTotal} numSides={6}/>
   </>);
 }
 
