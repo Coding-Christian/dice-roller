@@ -4,9 +4,8 @@
   "description": "A React-based web app for RPG players who want to roll incessant quantities of die.",
   "main": "index.html",
   "scripts": {
-    "client": "webpack-dev-server",
-    "build": "webpack --mode=production",
-    "dev": "npm-run-all --silent --parallel start client"
+    "dev": "webpack-dev-server",
+    "build": "webpack --mode=production"
   },
   "husky": {
     "hooks": {
