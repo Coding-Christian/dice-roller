@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const useDice = function (options, quantity = 0) {
   const [diceVals, setDiceVals] = useState([]);
+  const diceTotal = diceVals.reduce((acc, curr) => acc + curr, 0);
   if (quantity && quantity > 0) {
     for (let i = 0; i < quantity; i++) {
       addDice(quantity);
@@ -30,7 +31,7 @@ const useDice = function (options, quantity = 0) {
     }
     setDiceVals(newDiceVals);
   }
-  return [diceVals, addDice, removeDice, rollDice];
+  return [diceVals, diceTotal, addDice, removeDice, rollDice];
 };
 
 export default useDice;

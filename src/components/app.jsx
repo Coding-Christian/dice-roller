@@ -3,9 +3,9 @@ import useDice from '../hooks/useDice';
 import Dice from './dice';
 
 function App(props) {
-  const [diceVals, addDice, removeDice, rollDice] = useDice([1, 2, 3, 4, 5, 6]);
+  const [diceVals, diceTotal, addDice, removeDice, rollDice] = useDice([1, 2, 3, 4, 5, 6]);
   return (<>
-    <h1>Total: {diceVals.reduce((acc, curr) => acc + curr, 0)}</h1>
+    <h1>Total: {diceTotal}</h1>
     <div className='dice-controls'>
       <button onClick={() => removeDice(1)}>-</button>
       {diceVals.length}
