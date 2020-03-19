@@ -10,7 +10,7 @@ function DiceTray({ setSumTotal, numSides }) {
     setPrevTotal(diceTotal);
   }, [diceTotal]);
   return (<>
-    <h1>Total: {diceTotal}</h1>
+    <h2> d{numSides} Total: {diceTotal}</h2>
     <div className='dice-controls'>
       <button onClick={() => removeDice(1)}>-</button>
       {diceVals.length}

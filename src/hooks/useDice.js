@@ -16,7 +16,7 @@ const useDice = function (numSides, quantity = 0) {
     if (quantity > 0) {
       const randVals = [];
       for (let i = 0; i < quantity; i++) {
-        randVals.push(options[Math.floor(Math.random() * options.length)]);
+        randVals.push(0);
       }
       setDiceVals(diceVals => [...diceVals, ...randVals]);
     }
