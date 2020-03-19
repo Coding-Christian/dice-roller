@@ -11,13 +11,21 @@
   margin: 0 5px;
 }
 
+.dice-tray-area {
+  display: flex;
+}
+
 .square-dice {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75px;
-  width: 75px;
-  font-size: 2.3rem;
+  height: 50px;
+  width: 50px;
+  font-size: 2rem;
   border: 2px solid black;
   margin: 5px;
+}
+
+.tray-col {
+  width: 50%;
 }
