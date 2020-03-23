@@ -1,19 +1,17 @@
-.dice-area {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.dice-controls {
-  margin-bottom: 10px;
-}
-
-.dice-controls > button {
+.app-controls > * {
   margin: 0 5px;
 }
 
-.dice-tray-area {
+.dice-tray-controls {
+  margin-bottom: 10px;
+}
+
+.dice-tray-controls > * {
+  margin: 0 5px;
+}
+
+.dice-tray-dice {
   display: flex;
-  flex-direction: column;
 }
 
 .square-dice {
