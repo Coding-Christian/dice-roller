@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import useDice from '../hooks/useDice';
 import Dice from './dice';
 
-function DiceTray({ setSumTotal, numSides }) {
+function DiceTray({ numSides }) {
   const [diceVals, diceTotal, addDice, removeDice, rollDice] = useDice(numSides);
-  const [prevTotal, setPrevTotal] = useState(0);
-  useEffect(() => {
-    setSumTotal(sum => sum - prevTotal + diceTotal);
-    setPrevTotal(diceTotal);
-  }, [diceTotal]);
   return (<>
     <h2> d{numSides} Total: {diceTotal}</h2>
     <div className='dice-controls'>

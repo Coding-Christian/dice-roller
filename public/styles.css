@@ -13,6 +13,7 @@
 
 .dice-tray-area {
   display: flex;
+  flex-direction: column;
 }
 
 .square-dice {
@@ -24,8 +25,4 @@
   font-size: 2rem;
   border: 2px solid black;
   margin: 5px;
-}
-
-.tray-col {
-  width: 50%;
 }
