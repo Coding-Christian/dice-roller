@@ -1,17 +1,16 @@
-.dice-area {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.dice-controls {
-  margin-bottom: 10px;
-}
-
-.dice-controls > button {
+.app-controls > * {
   margin: 0 5px;
 }
 
-.dice-tray-area {
+.dice-tray-controls {
+  margin-bottom: 10px;
+}
+
+.dice-tray-controls > * {
+  margin: 0 5px;
+}
+
+.dice-tray-dice {
   display: flex;
 }
 
@@ -24,8 +23,4 @@
   font-size: 2rem;
   border: 2px solid black;
   margin: 5px;
-}
-
-.tray-col {
-  width: 50%;
 }
