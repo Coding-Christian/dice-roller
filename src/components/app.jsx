@@ -7,17 +7,19 @@ function App(props) {
   for (let i = 0; i < numTrays; i++) {
     trays.push(<DiceTray key={i} numSides={6}/>);
   }
-  return (<>
-    <div className="dice-controls">
-      <button onClick={() => setNumTrays(num => num - 1)}>-</button>
-        Trays
-      <button onClick={() => setNumTrays(num => num + 1)}>+</button>
+  return (
+    <div className='app'>
+      <div className="app-controls">
+        <button onClick={() => setNumTrays(num => num - 1)}>-</button>
+          Trays
+        <button onClick={() => setNumTrays(num => num + 1)}>+</button>
+      </div>
+      <hr/>
+      <div className="app-dice-trays">
+        {trays}
+      </div>
     </div>
-    <hr/>
-    <div className="dice-tray-area">
-      {trays}
-    </div>
-  </>);
+  );
 }
 
 export default App;

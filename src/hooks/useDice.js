@@ -1,16 +1,12 @@
 import { useState } from 'react';
 
-const useDice = function (numSides, quantity = 0) {
+const useDice = function (sides) {
   const options = [];
-  for (let i = 1; i <= numSides; i++) {
-    options.push(i);
-  }
+  const [numSides, setNumSides] = useState(sides);
   const [diceVals, setDiceVals] = useState([]);
   const diceTotal = diceVals.reduce((acc, curr) => acc + curr, 0);
-  if (quantity && quantity > 0) {
-    for (let i = 0; i < quantity; i++) {
-      addDice(quantity);
-    }
+  for (let i = 1; i <= numSides; i++) {
+    options.push(i);
   }
   function addDice(quantity) {
     if (quantity > 0) {
@@ -35,7 +31,7 @@ const useDice = function (numSides, quantity = 0) {
     }
     setDiceVals(newDiceVals);
   }
-  return [diceVals, diceTotal, addDice, removeDice, rollDice];
+  return [diceVals, diceTotal, addDice, removeDice, rollDice, setNumSides];
 };
 
 export default useDice;
